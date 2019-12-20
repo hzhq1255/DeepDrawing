@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Sketcher</title>
+<title>涂鸦识别</title>
 
 <!-- bs4 css -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
@@ -39,20 +39,19 @@
 <div class="container-fluid"> 
 
 <blockquote class="blockquote text-justify" style="margin:30px;">
- <p> Sketcher is a simple tool that uses CNN to recognize drawings. 
- The CNN was trained to recognize 100 <a href='mini_classes.txt'>classes</a> using the quick draw <a href='https://github.com/googlecreativelab/quickdraw-dataset'> dataset</a>. It achieves 6% top 5 error. The accuracy could be improved
-but I focused on making the model light with around 1 million parameters. The table  will show the top 5 predictions. </p>
-    <footer class="blockquote-footer">ZAID ALYAFEAI</footer>
+ <p> 
+ 我们使用CNN(卷积神经网络)对数据进行训练 <a href='mini_classes.txt'>可以识别的物体</a> 使用quickdraw-dataset数据集 <a href='https://github.com/googlecreativelab/quickdraw-dataset'> dataset</a>. It achieves 6% top 5 error. The accuracy could be improved
+网页左边是画布，右边是猜测结果，猜测结果将显示最有可能的五种情况  </p>
   </blockquote>
 </div>
 
 <div class="row">
   <div class="col" style ='margin-left:100px;'>
-<h4 id ='status' >Loading Model... </h4>	  
+<h4 id ='status' >加载模型 </h4>	  
 <canvas id="canvas" width="300" height="300" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
 <div class="btn-group" style = 'margin-top:40px; '>
 <input type="range" min="5" max="20" value="10" class="slider" id="myRange" style ='margin-top:20px;'>
-<button type="button" class="btn btn-outline-primary" onclick ='erase()' style ='margin-left:10px;' disabled>Clear</button>
+<button type="button" class="btn btn-outline-primary" onclick ='erase()' style ='margin-left:10px;' disabled>清空画布</button>
     </div>   
 </div>
   <div class="col">
